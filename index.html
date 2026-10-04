@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Search App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">VideoFinder</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#results">Videos</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Find Your Favorite Videos</h1>
+
+        <p>
+            Search for videos, tutorials, entertainment and educational
+            content quickly and easily.
+        </p>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for videos..."
+                onkeypress="handleEnter(event)"
+            >
+
+            <button onclick="searchVideos()">
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="suggestions">
+
+    <h2>Popular Searches</h2>
+
+    <div class="suggestion-buttons">
+
+        <button onclick="quickSearch('HTML tutorial')">
+            HTML Tutorial
+        </button>
+
+        <button onclick="quickSearch('JavaScript tutorial')">
+            JavaScript
+        </button>
+
+        <button onclick="quickSearch('Python programming')">
+            Python
+        </button>
+
+        <button onclick="quickSearch('Web development')">
+            Web Development
+        </button>
+
+        <button onclick="quickSearch('Technology')">
+            Technology
+        </button>
+
+    </div>
+
+</section>
+
+<section class="results-section" id="results">
+
+    <div class="section-heading">
+
+        <h2 id="resultTitle">Featured Videos</h2>
+
+        <p id="resultMessage">
+            Explore popular videos and search for your favorite content.
+        </p>
+
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+
+        <!-- Videos added by JavaScript -->
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 VideoFinder | YouTube Video Search App
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

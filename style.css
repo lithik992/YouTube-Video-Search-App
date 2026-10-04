@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #ef4444;
+}
+
+.hero {
+    min-height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    background: linear-gradient(135deg, #111827, #374151);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #d1d5db;
+}
+
+.search-container {
+    display: flex;
+    max-width: 700px;
+    margin: auto;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    outline: none;
+    border-radius: 7px 0 0 7px;
+    font-size: 16px;
+}
+
+.search-container button {
+    width: 120px;
+    border: none;
+    background: #ef4444;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 7px 7px 0;
+}
+
+.search-container button:hover {
+    background: #dc2626;
+}
+
+.suggestions {
+    background: white;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+.suggestions h2 {
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.suggestion-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.suggestion-buttons button {
+    padding: 10px 18px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.suggestion-buttons button:hover {
+    background: #ef4444;
+    color: white;
+}
+
+.results-section {
+    width: 88%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: #111827;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #666;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.video-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.thumbnail {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 18px;
+}
+
+.video-info h3 {
+    font-size: 17px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.video-info p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.watch-btn {
+    display: inline-block;
+    padding: 9px 15px;
+    background: #ef4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.watch-btn:hover {
+    background: #dc2626;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    color: #777;
+}
+
+footer {
+    background: #111827;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-container input,
+    .search-container button {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
